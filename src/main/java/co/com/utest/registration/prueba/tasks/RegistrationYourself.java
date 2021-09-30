@@ -32,8 +32,7 @@ public class RegistrationYourself implements Task {
                 Enter.theValue(strEmail).into(RegistrationPage.INPUT_EMAIL),
                 SelectFromOptions.byValue("number:7").from(RegistrationPage.SELECT_MONTH),
                 SelectFromOptions.byValue("number:15").from(RegistrationPage.SELECT_DAY),
-                SelectFromOptions.byValue("number:1993").from(RegistrationPage.SELECT_YEAR),
-                Click.on(RegistrationPage.NEXT_BUTTON)
+                SelectFromOptions.byValue("number:1993").from(RegistrationPage.SELECT_YEAR)
         );
 
     }

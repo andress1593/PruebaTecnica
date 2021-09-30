@@ -24,5 +24,5 @@ public class RegistrationPagePassword {
             .located(By.id("laddaBtn"));
 
     public static final Target WELCOME_TITLE = Target.the("identify welcome message")
-            .located(By.xpath("/html/body/ui-view/unauthenticated-container/div/div/div/ui-view/div/div/div/div[1]/div/h1"));
+            .located(By.xpath("//*[@id=\"mainContent\"]/div/div/div[1]/div/h1"));
 }

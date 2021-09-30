@@ -25,7 +25,4 @@ public class RegistrationPage {
 
     public static final Target SELECT_YEAR = Target.the("Select the year of birth")
             .located(By.id("birthYear"));
-
-    public static final Target NEXT_BUTTON = Target.the("confirm data, move to location")
-            .located(By.xpath("/html/body/ui-view/main/section/div/div[2]/div/div[2]/div/form/div[2]/a/span"));
 }

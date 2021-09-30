@@ -2,10 +2,7 @@ package co.com.utest.registration.prueba.stepdefinitions;
 
 import co.com.utest.registration.prueba.model.UtestData;
 import co.com.utest.registration.prueba.questions.Answer;
-import co.com.utest.registration.prueba.tasks.OpenUp;
-import co.com.utest.registration.prueba.tasks.RegistrationDevices;
-import co.com.utest.registration.prueba.tasks.RegistrationPassword;
-import co.com.utest.registration.prueba.tasks.RegistrationYourself;
+import co.com.utest.registration.prueba.tasks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -32,7 +29,9 @@ public class UTestStepDefinitions {
     public void heFillsOutTheRegistrationForm(List<UtestData> utestData) throws Exception {
         OnStage.theActorInTheSpotlight().attemptsTo(RegistrationYourself.
                 onThePage(utestData.get(0).getStrName(), utestData.get(0).getStrLastName(), utestData.get(0).getStrEmail()));
-        OnStage.theActorInTheSpotlight().attemptsTo(RegistrationDevices.onThePage());
+        OnStage.theActorInTheSpotlight().attemptsTo(RegistrationAddress.onThePage(utestData.get(0).getStrCity(), utestData.get(0).getStrPostal(), utestData.get(0).getStrCountry()));
+        OnStage.theActorInTheSpotlight().attemptsTo(RegistrationDevices.onThePage(utestData.get(0).getStrSystem(), utestData.get(0).getStrSystemVersion(), utestData.get(0).getStrLanguage(),
+                utestData.get(0).getStrMobile(), utestData.get(0).getStrModel(), utestData.get(0).getStrMobileOS()));
         OnStage.theActorInTheSpotlight().attemptsTo(RegistrationPassword.onThePage(utestData.get(0).getStrPassword()));
     }
 
